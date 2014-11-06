@@ -11,7 +11,8 @@ hh_power$datetime <- as.POSIXct(strptime(paste(format(hh_power[,1]), hh_power[,2
                                          format = "%Y-%m-%d %H:%M:%S"))
 ###########################################################################
 ## Draw something:
-par(mfrow = c(2, 2), oma = c(1, 1, 0, 0))
+png(filename = "plot4.png")
+par(mfrow = c(2, 2), oma = c(1, 1, 0, 0), mar = c(5, 4, 2, 2))
 with(hh_power, { 
     # top left plot (plot 2)
     plot(datetime, Global_active_power, type="l", 
@@ -28,6 +29,4 @@ with(hh_power, {
     # bottom right plot
     plot(datetime, Global_reactive_power, type="l")
 })
-# Save to png:
-dev.copy(png, "plot4.png")
 dev.off()
