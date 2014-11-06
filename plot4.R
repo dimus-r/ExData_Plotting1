@@ -11,7 +11,7 @@ hh_power$datetime <- as.POSIXct(strptime(paste(format(hh_power[,1]), hh_power[,2
                                          format = "%Y-%m-%d %H:%M:%S"))
 ###########################################################################
 ## Draw something:
-png(filename = "plot4.png")
+png(filename = "plot4.png", width = 504, height = 504)
 par(mfrow = c(2, 2), oma = c(1, 1, 0, 0), mar = c(5, 4, 2, 2))
 with(hh_power, { 
     # top left plot (plot 2)
@@ -25,7 +25,7 @@ with(hh_power, {
     lines(datetime, Sub_metering_2, type="l", col = "red")
     lines(datetime, Sub_metering_3, type="l", col = "blue")
     legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-           lty = 1, col = c("black", "red", "blue"))
+           lty = 1, col = c("black", "red", "blue"), bty = "n")
     # bottom right plot
     plot(datetime, Global_reactive_power, type="l")
 })

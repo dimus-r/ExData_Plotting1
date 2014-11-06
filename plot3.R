@@ -11,7 +11,7 @@ hh_power$datetime <- as.POSIXct(strptime(paste(format(hh_power[,1]), hh_power[,2
                                          format = "%Y-%m-%d %H:%M:%S"))
 ###########################################################################
 ## Draw something:
-png(filename = "plot3.png")
+png(filename = "plot3.png", width = 504, height = 504)
 with(hh_power, { 
        plot(datetime, Sub_metering_1, type="l", col = "black",
             xlab = "", ylab = "Energy sub metering")

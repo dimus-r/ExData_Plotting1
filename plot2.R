@@ -11,7 +11,7 @@ hh_power$datetime <- as.POSIXct(strptime(paste(format(hh_power[,1]), hh_power[,2
                                          format = "%Y-%m-%d %H:%M:%S"))
 ###########################################################################
 ## Draw something:
-png(filename = "plot2.png")
+png(filename = "plot2.png", width = 504, height = 504)
 with(hh_power, 
      plot(datetime, Global_active_power, type="l", 
           xlab = "", ylab = "Global Active Power (kilowatts)"))
