@@ -2,6 +2,8 @@
 
 Every plotN.R script is designed to work independently. It would download <a href="https://d396qusza40orc.cloudfront.net/exdata/data/household_power_consumption.zip"> Electric power consumption dataset</a>, unzip it, load and prepare data before creating a plot as plotN.png file. If several scripts are run in sequence it might be a good idea to comment out the common section (it's clearly marked in the script). Scripts draw directly to png device, since an attempt to draw on screen and then copy to png produced incorrect results.
 
+The project description specified that the plots should be <b>480x480</b>, however if you check reference plots they are actually <b>504x504</b>. Bigger size was used to provide better match with reference plots.
+
 All text below was left as-is.
 
 ## Introduction
